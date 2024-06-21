@@ -1,0 +1,42 @@
+---
+
+- name: install privacy packages
+  ansible.builtin.apt:
+    name: "{{ privacy_packages }}"
+    state: present
+    force_apt_get: true
+
+# this is needed for checking if certain packages are installed
+- name: gather package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- block:
+    - name: copy torrc file
+      ansible.builtin.copy:
+        src: etc/tor/torrc
+        dest: /etc/tor/torrc
+        owner: root
+        group: root
+        mode: '0644'
+        backup: true
+
+    - name: ensure tor service runs on system startup
+      ansible.builtin.systemd:
+        name: tor
+        state: started
+        enabled: true
+  when: '"tor" in ansible_facts.packages'
+
+- block:
+    - name: copy proxychains4 config file
+      ansible.builtin.copy:
+        src: etc/proxychains4.conf
+        dest: /etc/proxychains4.conf
+        owner: root
+        group: root
+        mode: '0644'
+        backup: true
+  when: '"proxychains4" in ansible_facts.packages'
+
+...

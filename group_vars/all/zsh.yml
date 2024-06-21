@@ -1,0 +1,8 @@
+---
+
+zsh_packages:
+  - zsh
+  - zsh-doc
+  - zsh-antigen
+
+...
