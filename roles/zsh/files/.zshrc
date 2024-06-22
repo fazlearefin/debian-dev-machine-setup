@@ -34,8 +34,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # pure theme
 # https://github.com/sindresorhus/pure
-#antigen bundle mafredri/zsh-async@main
-#antigen bundle sindresorhus/pure@main
+antigen bundle mafredri/zsh-async@main
+antigen bundle sindresorhus/pure@main
 
 # powerlevel10k theme
 # https://github.com/romkatv/powerlevel10k
@@ -47,7 +47,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # spaceship theme
 # https://github.com/spaceship-prompt/spaceship-prompt
-antigen theme spaceship-prompt/spaceship-prompt
+#antigen theme spaceship-prompt/spaceship-prompt
 
 # Tell antigen that you're done.
 antigen apply
