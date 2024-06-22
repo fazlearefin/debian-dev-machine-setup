@@ -60,7 +60,7 @@ Summary of packages that get installed and configured based on roles:
   - enable bullet train zsh theme (others like p10k can be configured as well)
 - **role: firefox**
   - add Mozilla Firefox apt repo
-  - install the latest version of Firefox
+  - install the latest version of Firefox (the bundled esr version in Debian is several versions old)
 - **role: googlechrome**
   - add Google Chrome apt repo
   - install Google Chrome
