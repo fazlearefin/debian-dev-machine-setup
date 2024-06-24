@@ -23,6 +23,8 @@ base_system_tools:
   - gnome-calculator
   - gufw
   - nala    # alternative package management tool to apt/apt-get
+  - network-manager-openvpn-gnome
+  - openvpn
   - progress
   - pwgen
 #  - syncthing
