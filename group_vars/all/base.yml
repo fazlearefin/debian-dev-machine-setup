@@ -59,6 +59,9 @@ base_developer_tools:
   - awscli
   - bat  # A cat(1) clone with wings
   - bats  # Bash Automated Testing System
+  - bats-assert
+  - bats-file
+  - bats-support
   - bpython
   - black
   - btop  # Modern and colorful command line resource monitor that shows usage and stats
