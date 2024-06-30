@@ -8,6 +8,10 @@ The playbooks should run in Debian based system with minor modifications but was
 
 - **Debian 12**
 
+Screenshot below is using *p10k zsh theme with tmux*
+
+![p10k-zsh-theme-tmux](.images/screenshot-p10k-tmux.png)
+
 ---
 
 ## What gets installed and cofigured?
