@@ -16,7 +16,7 @@ Screenshot below is using *p10k zsh theme with tmux*
 
 ## What gets installed and cofigured?
 
-I am a DevSecOps Engineer and my daily job include working with AWS, docker, ansible, etc. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
+I am a DevSecOps Engineer and my daily job include working with AWS, docker, ansible, terraform, etc. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
 
 Summary of packages that get installed and configured based on roles:
 
@@ -65,6 +65,7 @@ Summary of packages that get installed and configured based on roles:
 - **role: firefox**
   - add Mozilla Firefox apt repo
   - install the latest version of Firefox (the bundled esr version in Debian is several versions old)
+    - (use command `apt-cache policy firefox firefox-esr` to verify which repo gets to update what)
 - **role: googlechrome**
   - add Google Chrome apt repo
   - install Google Chrome
