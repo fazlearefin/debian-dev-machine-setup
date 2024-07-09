@@ -1,3 +1,7 @@
+Package: firefox-esr
+Pin: origin packages.mozilla.org
+Pin-Priority: -1
+
 Package: *
 Pin: origin packages.mozilla.org
 Pin-Priority: 1000
