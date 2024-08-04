@@ -22,6 +22,7 @@ base_system_tools:
   - fatrace
   - fdupes
   - gnome-calculator
+  - gnome-shell-extension-bluetooth-quick-connect
   - gufw
   - nala    # alternative package management tool to apt/apt-get
   - network-manager-openvpn-gnome
