@@ -82,7 +82,6 @@ base_developer_tools:
   - fzf
   - g++
   - gawk
-  - gedit-plugins
   - geoip-bin
   - git
   - git-extras
