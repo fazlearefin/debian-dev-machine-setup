@@ -6,7 +6,7 @@ This repo contains Ansible playbooks to configure your system as a development m
 
 The playbooks should run in Debian based system with minor modifications but was only tested with:
 
-- **Debian 12**
+- **Debian 12/Bookworm (stable)**
 
 Screenshot below is using *p10k zsh theme with tmux*
 
