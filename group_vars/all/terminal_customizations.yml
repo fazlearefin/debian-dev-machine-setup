@@ -5,18 +5,29 @@ terminal_customizations_nerd_fonts_base_url: "https://github.com/ryanoasis/nerd-
 
 # nerd fonts from https://github.com/ryanoasis/nerd-fonts
 terminal_customizations_nerd_fonts:
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Retina/FiraCodeNerdFontMono-Retina.ttf"  # do not remove; tilix profile depends on this
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/Inconsolata/InconsolataNerdFontMono-Regular.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Regular.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/UbuntuMono/Regular/UbuntuMonoNerdFontMono-Regular.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/Monoid/Retina/MonoidNerdFontMono-Retina.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/DroidSansMono/DroidSansMNerdFontMono-Regular.otf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/Hack/Regular/HackNerdFontMono-Regular.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/RobotoMono/Regular/RobotoMonoNerdFontMono-Regular.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Regular/VictorMonoNerdFontMono-Regular.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Bold/CaskaydiaCoveNerdFontMono-BoldItalic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Bold/CaskaydiaCoveNerdFontMono-Bold.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Regular/CaskaydiaCoveNerdFontMono-Italic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Regular/CaskaydiaCoveNerdFontMono-Regular.ttf"
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/Noto/Mono/NotoMonoNerdFontMono-Regular.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Bold/FiraCodeNerdFontMono-Bold.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Regular/FiraCodeNerdFontMono-Regular.ttf"             # don't remove; tilix profile uses this
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/BoldItalic/JetBrainsMonoNerdFontMono-BoldItalic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/Bold/JetBrainsMonoNerdFontMono-Bold.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/Italic/JetBrainsMonoNerdFontMono-Italic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFontMono-Regular.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/BoldItalic/JetBrainsMonoNLNerdFontMono-BoldItalic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/Bold/JetBrainsMonoNLNerdFontMono-Bold.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/Italic/JetBrainsMonoNLNerdFontMono-Italic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/Regular/JetBrainsMonoNLNerdFontMono-Regular.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-BoldItalic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Bold.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Italic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Regular.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Bold-Italic/VictorMonoNerdFontMono-BoldItalic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Bold/VictorMonoNerdFontMono-Bold.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Italic/VictorMonoNerdFontMono-Italic.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Regular/VictorMonoNerdFontMono-Regular.ttf"
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/DroidSansMono/DroidSansMNerdFontMono-Regular.otf"
 
 terminal_customizations_tmux_plugin_repo: "https://github.com/tmux-plugins/tpm"
 
