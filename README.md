@@ -2,154 +2,150 @@
 
 ## Description
 
-This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
+This repository contains Ansible playbooks to configure a system as a development machine after a clean install.
 
-The playbooks should run in Debian based system with minor modifications but was only tested with:
+The playbooks are designed for Debian-based systems with minimal modifications but have only been tested on:
 
 - **Debian 12/Bookworm (stable)**
 
-Screenshot below is using *p10k zsh theme with tmux*
+The screenshot below shows the *p10k zsh theme with tmux*:
 
 ![p10k-zsh-theme-tmux](.images/screenshot-p10k-tmux.png)
 
 ---
 
-## What gets installed and configured?
+## What Gets Installed and Configured?
 
-I am a DevSecOps Engineer and my daily job include working with AWS, docker, ansible, terraform, etc. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
+As a DevSecOps Engineer, I work daily with tools like AWS, Docker, Ansible, and Terraform. If you’re in a similar profession, this setup will likely meet your needs. The system is also easily extensible using Ansible roles.
 
-Summary of packages that get installed and configured based on roles:
+Below is a summary of the packages installed and configured, organized by roles:
 
 - **role: base**
-  - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
-  - set default system editor to vim instead of nano
-  - enable ufw firewall and install ufw graphical frontend gufw
-  - tune system swappiness so that swapping is greatly reduced
-  - upgrade all packages
-  - install archiving tools like zip, rar, etc
-  - install libreoffice
-  - install foliate, an e-book reader
-  - install glow, apostrophe and Obsidian markdown viewers/editors
-  - install power management tools like [TLP](https://github.com/linrunner/TLP)
-  - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, poetry, etc
-  - install nala, an alternative package management tool to apt/apt-get
-  - install code fomatters and linters like black, ruff, ansible-lint, etc
-  - setup golang directories
-  - install download tools like axel, transmission, wget, aria2
-  - install image, audio and video packages like vlc, totem, gimp, imagemagick, etc
-  - install virtualization tools like virtualbox, docker, docker-compose
-  - option to turn on night light settings for eye comfort (set `base_permanent_night_light.night_light_enabled` to `True`)
-  - enable `fzf` fuzzy finder in zsh terminal; check out this [YouTube video](https://www.youtube.com/watch?v=1a5NiMhqAR0) to see how to use it
+  - Mounts `/tmp` on tmpfs to reduce SSD read/write operations and extend SSD lifespan, with no leftover files on system shutdown.
+  - Sets the default system editor to Vim instead of Nano.
+  - Enables the UFW firewall and installs the GUFW graphical frontend.
+  - Tunes system swappiness to minimize swapping.
+  - Upgrades all system packages.
+  - Installs archiving tools like `zip`, `rar`, and others.
+  - Installs LibreOffice.
+  - Installs Foliate (an e-book reader) and markdown viewers/editors like Glow, Apostrophe, and Obsidian.
+  - Installs power management tools like [TLP](https://github.com/linrunner/TLP).
+  - Installs development tools such as `android-tools`, `awscli`, `httpie`, `clusterssh`, `docker`, `filezilla`, `golang`, `poetry`, and more.
+  - Installs Nala, an alternative package management tool to `apt`/`apt-get`.
+  - Installs code formatters and linters like `black`, `ruff`, and `ansible-lint`.
+  - Sets up Go programming language directories.
+  - Installs download tools like `axel`, `transmission`, `wget`, and `aria2`.
+  - Installs image, audio, and video tools like `vlc`, `totem`, `gimp`, and `imagemagick`.
+  - Installs virtualization tools like VirtualBox, Docker, and Docker Compose.
+  - Optionally enables night light settings for eye comfort (set `base_permanent_night_light.night_light_enabled` to `True`).
+  - Enables `fzf` fuzzy finder in the Zsh terminal; see this [YouTube video](https://www.youtube.com/watch?v=1a5NiMhqAR0) for usage instructions.
 - **role: hashicorp**
-  - install vagrant, terraform, packer
+  - Installs Vagrant, Terraform, and Packer.
 - **role: terminal_customizations**
-  - download and install some nerd fonts from ryanoasis/nerd-fonts; these are mono fonts ideal for use in terminal or programming editors
-  - copy and enable sample tilix config file with configured nerd font
-  - copy and enable sample tmux config file if one does not exist
-  - copy and enable sample `~/.tmux.conf` file with [tmux plugin manager](https://github.com/tmux-plugins/tpm) and several tmux plugins
-    - open Tilix terminal and run `tmux` command, or enable custom command option in Tilix
-    - edit `~/.tmux.conf` if necessary
+  - Downloads and installs Nerd Fonts from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts), ideal for terminals and programming editors.
+  - Copies and enables a sample Tilix configuration file with a configured Nerd Font.
+  - Copies and enables a sample `~/.tmux.conf` file with the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) and several Tmux plugins if one does not exist.
+    - Open Tilix and run the `tmux` command, or enable the custom command option in Tilix.
+    - Edit `~/.tmux.conf` as needed.
 - **role: vim**
-  - install vim packages
-  - install amix/vimrc vim distribution
-  - create sample vim customization file in `~/.vim_runtime/my_configs.vim`
-    - additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary.
+  - Installs Vim packages.
+  - Installs the [amix/vimrc](https://github.com/amix/vimrc) Vim distribution.
+  - Creates a sample Vim customization file at `~/.vim_runtime/my_configs.vim`.
+    - Additional Vim settings are enabled in `~/.vim_runtime/my_configs.vim`, which are not part of the Vim distribution. Edit this file as needed.
 - **role: zsh**
-  - install zsh package and set user shell to zsh
-  - install antigen zsh plugin manager
-  - copy and enable sample `~/.zshrc` file if one does not exist
-    - contains function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
-    - adds additional shell aliases, functions and variables in `~/.shell_aliases.sh`, `~/.shell_functions.sh` and `~/.shell_variables.sh`
-  - install ohmyzsh/ohmyzsh and enable some bundled plugins
-  - enable bullet train zsh theme (others like p10k can be configured as well)
+  - Installs the Zsh package and sets it as the user’s default shell.
+  - Installs the Antigen Zsh plugin manager.
+  - Copies and enables a sample `~/.zshrc` file if one does not exist, including:
+    - A function to prevent `ssh-agent` from repeatedly prompting for encrypted SSH key passwords when opening new terminals.
+    - Additional shell aliases, functions, and variables in `~/.shell_aliases.sh`, `~/.shell_functions.sh`, and `~/.shell_variables.sh`.
+  - Installs [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) and enables select bundled plugins.
+  - Enables the Bullet Train Zsh theme (other themes like Powerlevel10k can also be configured).
 - **role: firefox**
-  - add Mozilla Firefox apt repo
-  - install the latest version of Firefox (the bundled esr version in Debian is several versions old)
-    - (use command `apt-cache policy firefox firefox-esr` to verify which repo gets to update what)
+  - Adds the Mozilla Firefox APT repository.
+  - Installs the latest version of Firefox (the bundled ESR version in Debian is outdated).
+    - Use the command `apt-cache policy firefox firefox-esr` to verify which repository is used for updates.
 - **role: googlechrome**
-  - add Google Chrome apt repo
-  - install Google Chrome
+  - Adds the Google Chrome APT repository.
+  - Installs Google Chrome.
 - **role: vscode**
-  - add Visual Studio Code apt repo
-  - install Visual Studio Code
-  - install some popular Visual Studio Code extensions
+  - Adds the Visual Studio Code APT repository.
+  - Installs Visual Studio Code.
+  - Installs popular Visual Studio Code extensions.
 - **role: privacy**
-  - install tor
-  - configure tor to run at boot and prevent using certain countries as exit nodes
-    - edit `/etc/tor/torrc` if necessary
-  - install proxychains
-  - configure proxychains to use tor. View [my Medium story](https://fazlearefin.medium.com/tunneling-traffic-over-tor-network-using-proxychains-34c77ec32c0f) to see how to use it
-    - edit `/etc/proxychains4.conf` if necessary
-  - install metadata anonymization toolkit
+  - Installs Tor.
+  - Configures Tor to run at boot and excludes certain countries as exit nodes.
+    - Edit `/etc/tor/torrc` as needed.
+  - Installs ProxyChains.
+  - Configures ProxyChains to use Tor; see [my Medium story](https://fazlearefin.medium.com/tunneling-traffic-over-tor-network-using-proxychains-34c77ec32c0f) for usage instructions.
+    - Edit `/etc/proxychains4.conf` as needed.
+  - Installs the Metadata Anonymization Toolkit.
 - **role: security**
-  - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint
-  - install firejail for sanboxing applications
-  - enable additional apparmor profiles
+  - Installs ClamAV (antivirus) and its GNOME interface. Perform manual scans from Nautilus or the CLI using `clamscan` (`clamd` is not installed due to its high memory usage).
+  - Installs Firejail for sandboxing applications.
+  - Enables additional AppArmor profiles.
 
 ---
 
-## Step 0 | Pre-requisites for running the ansible playbooks
+## Step 0 | Prerequisites for Running the Ansible Playbooks
 
-On the system which you are going to setup using Ansible, perform these steps.
+On the system to be configured, perform the following steps.
 
-You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
+Install `ansible` and `git` using either `pip` or `apt`:
 
 ```bash
-/usr/bin/sudo apt update
-/usr/bin/sudo apt full-upgrade -y
-/usr/bin/sudo apt install ansible git -y
+sudo apt update
+sudo apt full-upgrade -y
+sudo apt install ansible git -y
 ```
 
-And clone this repo (do not clone in `/tmp` as this dir is cleaned and mounted in tmpfs)
+Clone this repository (avoid cloning into `/tmp`, as it is cleaned and mounted on tmpfs):
 
 ```bash
 git clone https://github.com/fazlearefin/debian-dev-machine-setup.git
 cd debian-dev-machine-setup
 ```
 
-## Step 1 | Running the playbooks to configure your system
+## Step 1 | Running the Playbooks to Configure Your System
 
-**Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
+Run the following command as the primary user of the system, **not as `root`**:
 
 ```bash
 ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
 ```
 
-Enter the sudo password when asked for `BECOME password:`.
+Enter the sudo password when prompted for `BECOME password:`.
 
-The `main.yml` playbook will take anything from 15 minutes to an hour to complete.
+The `main.yml` playbook may take 15 minutes to an hour to complete.
 
-After all is done, give your laptop a new life by rebooting.
+After completion, reboot your system to apply all changes.
 
-> ### What is this `laptop_mode`?
+> ### What is `laptop_mode`?
 
-#### Setting this to `True`
+#### Setting `laptop_mode` to `True`
+- Installs battery-saving packages like [TLP](https://github.com/linrunner/TLP).
 
-- will install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
-
-#### Setting this to `False`
-
-- will NOT install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
+#### Setting `laptop_mode` to `False`
+- Skips battery-saving packages like [TLP](https://github.com/linrunner/TLP).
 
 ---
 
 ## Known Issues
 
-- If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
-- If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Nerd Font from the terminal's settings.
-- If you do not like the fuzzy finder completions in your terminal, remove or comment out the `#fzf` lines in your `~/.zshrc` (this is not a known issue but a feature)
-- When launching the terminal, having some [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) plugins like **docker** enabled results in the error: `tee: <snip> No such file or directory`. You can easily fix this by creating the missing directory manually: `mkdir -p ~/.antigen/bundles/robbyrussell/oh-my-zsh/cache/completions`.
+- If the Ansible playbook halts after completing some tasks, rerun it. Most tasks are idempotent, so running the playbook multiple times will not cause issues.
+- If your terminal displays garbled characters due to a Zsh theme, change the terminal font to a suitable Nerd Font in the terminal settings.
+- To disable fuzzy finder completions, comment out or remove the `#fzf` lines in `~/.zshrc` (this is a feature, not an issue).
+- Enabling certain [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) plugins, like **docker**, may result in an error: `tee: <snip> No such file or directory`. Fix this by creating the missing directory: `mkdir -p ~/.antigen/bundles/robbyrussell/oh-my-zsh/cache/completions`.
 
 ---
 
 ## Pull Requests and Forks
 
-You are more than welcome to send any pull requests. However, the intention of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
+Pull requests are welcome, but this repository is tailored to my development needs. For personalization, consider forking the repository to suit your requirements.
 
 ---
 
 ## Donations
 
-If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
+If this project saves you time and effort, feel free to make a donation. The code is completely free with *no strings attached*.
 
 Bitcoin (BTC): `bc1qzlhpm94vtk2ht67etdutzcy2g5an5v6g36tp0m`
