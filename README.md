@@ -14,7 +14,7 @@ Screenshot below is using *p10k zsh theme with tmux*
 
 ---
 
-## What gets installed and cofigured?
+## What gets installed and configured?
 
 I am a DevSecOps Engineer and my daily job include working with AWS, docker, ansible, terraform, etc. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
 
