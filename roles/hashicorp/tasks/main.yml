@@ -7,7 +7,7 @@
 
 - name: add hashicorp repo
   ansible.builtin.apt_repository:
-    repo: "{{ hashicorp_repo_bookworm }}"
+    repo: "{{ hashicorp_repo_trixie }}"
     state: present
     filename: hashicorp
 
