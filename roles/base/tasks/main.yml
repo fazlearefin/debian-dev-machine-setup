@@ -79,8 +79,8 @@
         mode: '0644'
         dest: /etc/apt/sources.list.d/debian-fasttrack.list
         content: |
-          deb https://fasttrack.debian.net/debian-fasttrack/ bookworm-fasttrack main contrib          # TODO: change for newer debian versions
-          deb https://fasttrack.debian.net/debian-fasttrack/ bookworm-backports-staging main contrib  # TODO: change for newer debian versions
+          deb https://fasttrack.debian.net/debian-fasttrack/ trixie-fasttrack main contrib          # TODO: change for newer debian versions
+          deb https://fasttrack.debian.net/debian-fasttrack/ trixie-backports-staging main contrib  # TODO: change for newer debian versions
 
 
 - name: install archiving tools
