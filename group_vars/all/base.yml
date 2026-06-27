@@ -1,15 +1,13 @@
 ---
 
 base_archiving_tools:
-  - arj            # ARJ archiver
-  - cabextract     # Extracts Microsoft cabinet files
+  - bzip2
+  - bzip3
   - file-roller    # GNOME archive manager
   - mpack          # MIME mail packer/unpacker
   - p7zip-full     # 7z archive support
-  - sharutils      # Shell archiving utilities
   - unace          # Extracts ACE archives
   - unzip          # Extracts ZIP archives
-  - uudeview       # UUencoded file decoder
   - zip            # ZIP archive tool
 
 base_productivity_tools:
