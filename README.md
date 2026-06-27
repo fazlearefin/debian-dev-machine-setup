@@ -80,7 +80,7 @@ cd debian-dev-machine-setup
 Run the following command as the primary user of the system, **not as `root`**:
 
 ```bash
-ansible-playbook main.yml -vv -e "local_username=$(id -un)" -K
+ansible-playbook main.yml -vv --ask-become-pass
 ```
 
 Enter the sudo password when prompted for `BECOME password:`.
