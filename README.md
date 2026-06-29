@@ -103,10 +103,3 @@ After completion, reboot your system to apply all changes.
 
 Pull requests are welcome, but this repository is tailored to my needs. For personalization, consider forking the repository to suit your requirements.
 
----
-
-## Donations
-
-If this project saves you time and effort, feel free to make a donation. The code is completely free with *no strings attached*.
-
-Bitcoin (BTC): `bc1qzlhpm94vtk2ht67etdutzcy2g5an5v6g36tp0m`
